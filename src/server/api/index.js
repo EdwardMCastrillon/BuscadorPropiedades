@@ -1,5 +1,4 @@
 import express from 'express'
-import qs from 'qs'
 import { findByCriteria, findAll } from '../storage'
 
 const Router = express.Router()
