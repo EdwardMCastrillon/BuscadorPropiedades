@@ -1,5 +1,5 @@
 import express from 'express'
-import { findByCriteria, findAll } from '../storage'
+import { findByCriteria, findAll, getInitialData } from '../storage'
 
 const Router = express.Router()
 
@@ -12,6 +12,11 @@ Router.get('/', (req, res) => {
 Router.get('/search', (req, res) => {
   let querystring = req.query
   let result = findByCriteria(querystring)
+  res.json(result)
+})
+
+Router.get('/data', (req, res) => {
+  let result = getInitialData()
   res.json(result)
 })
 

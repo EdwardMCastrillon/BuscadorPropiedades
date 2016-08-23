@@ -3,13 +3,6 @@
   "version": "0.1.0",
   "description": "buscador simple de propiedades en venta",
   "main": "index.js",
-  "scripts": {
-    "start": "NODE_PATH=./dist node dist/src/server/",
-    "public": "mkdir -p public/ && cp -r src/public/* public/",
-    "build": "npm run build-server && npm run public",
-    "build-server": "babel src/server/index.js src/server/**/*.js --out-dir dist --presets es2015",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Edward Monsalve",
   "license": "ISC",
   "dependencies": {
@@ -19,5 +12,12 @@
   },
   "devDependencies": {
     "babel-cli": "^6.11.4"
+  },
+  "scripts": {
+    "start": "NODE_PATH=./ node dist/src/server/",
+    "public": "mkdir -p public/ && cp -r src/public/* public/",
+    "build": "npm run build-server && npm run public",
+    "build-server": "babel src/server/index.js src/server/**/*.js --out-dir dist --presets es2015",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
